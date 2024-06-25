@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: darkslategray;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0px;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: nowrap;
+    min-width: 800px;
+}
+
+p{
+    text-align: center;
+}
+
+ul{
+    text-align: center;
+    list-style-position: inside;
+}
+
+nav{
+    background-color: rgb(59, 59, 59);
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+div ul{
+    list-style-position: outside;
+    text-align: left;
+}
+
+.navbar{
+    position: sticky;
+    min-width: 800px;
+    position: fixed;
+}
+
+a, a:visited{
+    color: whitesmoke;
+    text-decoration: underline;
+}
+
+.selector, .selector:visited{
+    color: darkslategray;
+    background-color: cyan;
+    border: 2px double;
+    border-color: cyan;
+    border-radius: 2rem;
+    padding: 7px 10px 7px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 6px;
+}
+
+.banner{
+    background-color: rgb(59, 59, 59);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.selector:hover, .selector:focus{
+    text-decoration: underline;
+}
+
+.title{
+    text-align: center;
+    padding: 100px 0px 0px;
+    font-size: 3em;
+    border-bottom: 2px double;
+    border-color: whitesmoke;
+    width: 800px;
+    margin: 0px auto 40px;
+}
+
+div h2{
+    text-decoration: underline;
+}
+
+.bottomrow{
+    display: flex;
+    justify-content: space-between;
+    padding:5px;
+}
+
+.bottomlink{
+    padding: 0px 20px;
+}
+
+.bottomnav{
+    margin: 50px 0px;
+    margin-bottom: 0px;
+}
+
+.sidebyside{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    max-width: 70%;
+    margin:auto;
+    align-items: center;
+}
+
+.sidebyside p{
+    white-space: wrap;
+    margin-right: 20px;
+}
+
+.thin-line {
+    border-top: 2px solid whitesmoke;
+    width: 800px;
+    margin: 15px auto;
+}
+
+.sectionheader{
+    font-size: 2em;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.caption{
+    color: rgb(119, 169, 169);
+    font-size: .8em;
+}
+
+.courselist li{
+    width: 350px;
+    justify-content: space-between;
+}
+
+.projdesc{
+    text-align: center;
+}
+
+.projdesc p{
+    margin-bottom: 15px;
+}
+
+.multigraph{
+    margin-bottom: 20px;
+}
+
+.alignedlist{
+    margin-left: 30%
+}
+
+.body-paragraph{
+    padding: 5px;
+    max-width: 70%;
+    align-items: center;
+    white-space: wrap;
+    margin: auto;
+}
+
+.justified{
+    text-align: justify;
+    text-align-last: left;
+    text-indent: 50px;
+    margin-top: 10px;
+}
+
+.text-wrap{
+    float: right;
+    margin-left: 12px;
+    margin-top: 8px;
+    text-indent: 0px;
+    text-align-last: center;
+    color: rgb(119, 169, 169);
+    font-size: .8em;
+}
+
+.image-paragraph{
+    text-align-last: justify;
+}
+
+.width200{
+    width: 200px;
+    height: auto;
+}
+
+.width250{
+    width: 250px;
+    height: auto;
+}
+
+.width300{
+    width: 300px;
+    height: auto;
+}
+
+.width325{
+    width: 325px;
+    height: auto;
+}
+
+.width350{
+    width: 350px;
+    height: auto;
+}
+
+.width450{
+    width: 450px;
+    height: auto;
+}
+
+.width500{
+    width: 500px;
+    height: auto;
+}
+
+.width550{
+    width: 550px;
+    height: auto;
+}
+
+.width600{
+    width: 600px;
+    height: auto;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeatable Glider Launcher - Seth Honnigford</title>
+    <link rel="stylesheet" href="C:\Users\sehon\Desktop\Prof Dev\Website Portfolio\CSS\style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="left-content">
+            <h2 class="banner">
+                Seth Honnigford
+            </h2>
+        </div>
+        <div class="right-content">
+            <a href=file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/Home.html class="selector">
+                Home
+            </a>
+            <a href=file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/Projects.html class="selector">
+                Projects
+            </a>
+            <a href=file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/Academics.html class="selector">
+                Academics
+            </a>
+            <a href=file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/About.html class="selector">
+                About
+            </a>
+        </div>
+    </nav>
+
+
+    <h2 class="title">
+        Repeatable Glider Launcher
+    </h2>
+    <h3 class="sectionheader">
+        The Inspiration/Motivation
+    </h3>
+    <div class="body-paragraph">
+        <p class="justified">
+            I completed this project in the summer of 2021 while assisting a graduate student in the Bioadaptive Morphology Laboratory (BAM Lab) at
+            the University of Illinois Urbana-Champaign. His research revolved around making small, light gliders inspired by the geometry of grasshopper wings.
+            A repeatable, consistent launcher was necessary in order to test the accuracy and flight distance of the various glider geometries.
+        </p>
+    </div>
+    <div class="thin-line"></div>
+    <h3 class="sectionheader">
+        How It Was Made
+    </h3>
+    <div class="body-paragraph justified">
+        <p class="justified">
+            The first step was to choose a method of launching the gliders. Their previous method used a rubber band that was pulled by a human 
+            and then released to propel the glider. That method had two main issues. The first is with the rubber band itself. The rubber band was not strong enough to give 
+            them the desired distances they wanted to test at, and it was not durable enough to launch enough times to get a sufficient amount of data.
+            The second major issue was that the human component of the launch could give a lot of inconsistencies between launches. The person launching the 
+            gliders would have to make their best guess at where to pull the rubber band to, and the exact way they release their fingers may be different from launch to launch.
+        </p>
+        <p class="justified image-paragraph">
+            After doing some research, I was able to come up with solutions to these issues. The first would be to replace the rubber band with an elastic that is used in sewing applications.
+            This elastic was much stronger
+            
+            <div class="width300 text-wrap">
+                <img src="file://C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/Images/Launcher2.png" alt="Launcher2" width="1213" height="761" class="width300">
+                (Screenshot of the SolidWorks CAD for the rod-based launcher design)
+            </div>
+
+            and more resilient, allowing us to launch the gliders further and to collect a sufficient number of data samples without the elastic breaking.
+            As for the method of release, there were two different approaches that I had settled on. One method used a metal rod that would prevent the glider from being launched by
+            blocking its path along the launching track, but could easily be removed to launch the glider. This method was great because the rod could be slid through a preset hole, meaning
+            the glider would be pulled back the same amount every single time. However, the rod still had to be pulled by a human, and while much better than releasing the elastic with fingers, 
+            the speed at which the rod was pulled out could vary from launch to launch. The other method was to epoxy a metal disc to the elastic, and then use an electromagnet to hold and release
+            the glider. This method solved both of the main issues, all the human interference that would occur is pushing a button, which really has no impact on the launch.
+        </p>
+        <p class="justified">
+            I used SolidWorks and the lab's 3D printers to rapidly prototype the two different designs until they were satisfactory. Then I gathered some data using glider dummies that didn't
+            have wings to test the consistency of the launchers.
+        </p>
+    </div>
+    <div class="thin-line"></div>
+    <h3 class="sectionheader">
+        Problems Along the Way
+    </h3>
+    <div class="body-paragraph">
+        <p class="justified">
+            The electromagnet design was somewhat tricky to get working. Figuring out a way to attach a magnetic piece of material onto the elastic without having that piece interfere with
+            or impact the glider during the launch was challenging. Because of this, I decided to launch the glider with the elastic oriented vertically, similar to a bow, so that the magnetic
+            attachment could be placed above the glider. However, that presented other issues now that we had to thread the elastic through the guide rails. Eventually, the tolerances were figured 
+            out after multiple iterations of prototypes. Even after the elastic was able to slide between the guard rails without interference, the electromagnet appeared to not be strong enough 
+            to hold the elastic when it was pulled all the way back. The specifications on the website where the electromagnet was purchased from stated that it was more than capable of producing enough force.
+            After some consideration, we found that the electromagnet was a lot weaker than its rating because of the poor contact with the magnetic attachment that was epoxied onto the elastic.
+            This issue was resolved by adding a metal disc to the attachment to increase the surface area that was in contact with the electromagnet. Changing to the metal disc wasn't perfect,
+            as the increase in volume and asymmetric nature led the elastic to spin and move more during the launch.
+        </p>
+    </div>
+    <div class="thin-line"></div>
+    <h3 class="sectionheader">
+        Results and Reflections
+    </h3>
+    <div class="body-paragraph justified">
+        <p class="justified image-paragraph">
+            After doing the tests with the dummy gliders, the rod-based release system was found to be more 
+            
+            <div class="width350 text-wrap">
+                <img src="file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/Images/Launcher3.png" alt="Launcher3" width="1419" height="1083" class="width350">
+                (The electromagnet version of the glider launcher)
+            </div>
+            
+            consistent. However, there are some easy fixes that could've been implemented
+            with the electromagnet design if I had more time on the project. As you can see in the video on the right, there is a wobbling in the electromagnet after the release of the switch.
+            This could easily be fixed by adding another support at the top of the electromagnet to help stabilize it. The other feature that could use some improvement is the attachment of 
+            magnetic piece to the elastic. If there was a way to increase the contact area without making the elastic become unstable during launch, that might improve some of the consistency
+            between launches. I think after some improvements on the electromagnet launcher, it would have outperformed the rod-based system.
+        </p>
+        <p class="justified">
+            This project was my first time designing something with multiple parts that had to work together, so some of my initial designs had parts that didn't fit together
+            properly or strongly enough. By the end, I had learned about some common ways to join parts together, and now take that into consideration heavily when designing parts.
+            Another big issue I ran into on this project was the amount of time it took to order certain parts that I needed for the project.
+            There were some parts that I was hesitant to order because I wasn't quite sure I would need them, but when I figured out exactly what I needed, I had to wait a few extra weeks.
+            Now I know to order parts ahead of time, so that I'm not stuck waiting for them to progress the project.
+        </p>
+    </div>
+
+
+    <nav class="bottomnav">
+        <div>
+
+        </div>
+        <div class="bottomrow">
+            <div class="bottomlink">
+                Email: sehonnigford@gmail.com
+            </div>
+            <div class="bottomlink">
+                Phone: (217) 402-6805
+            </div>
+            <a href=https://www.linkedin.com/in/seth-honnigford-34b691205/ class="bottomlink">
+                Linkedin
+            </a>
+            <a href=https://github.com/Seth-Honnigford class="bottomlink">
+                GitHub
+            </a>
+        </div>
+        <div>
+
+        </div>
+    </nav>
+</body>
+</html>

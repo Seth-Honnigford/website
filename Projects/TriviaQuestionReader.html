@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trvia Question Reader - Seth Honnigford</title>
+    <link rel="stylesheet" href="C:\Users\sehon\Desktop\Prof Dev\Website Portfolio\CSS\style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="left-content">
+            <h2 class="banner">
+                Seth Honnigford
+            </h2>
+        </div>
+        <div class="right-content">
+            <a href=file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/Home.html class="selector">
+                Home
+            </a>
+            <a href=file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/Projects.html class="selector">
+                Projects
+            </a>
+            <a href=file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/Academics.html class="selector">
+                Academics
+            </a>
+            <a href=file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/About.html class="selector">
+                About
+            </a>
+        </div>
+    </nav>
+
+
+    <h2 class="title">
+        Trivia Question Reader
+    </h2>
+    <h3 class="sectionheader">
+        The Inspiration/Motivation
+    </h3>
+    <div class="body-paragraph">
+        <p class="justified">
+            This project was made in the fall of 2020 for the final coding project of my First Year Engineering class. This project was definitely beyond the requirements
+            for the final project, but I really wanted to make something that I would actually use after the project was over. It was my first semester playing college
+            level Quizbowl, and I definitely noticed the difficulty spike and was looking to improve. This bot would let me or my teammates practice anytime and anywhere
+            on our phones without needing someone to read questions or moderate for us. 
+        </p>
+    </div>
+    <div class="thin-line"></div>
+    <h3 class="sectionheader">
+        How It Was Made
+    </h3>
+    <div class="body-paragraph justified">
+        <p class="justified">
+            The first step was to come up with a plan for how to accomplish this project. Discord has a bot API for two different programming languages; Python or JavaScript.
+            Since I had worked with Python before, and had no experience with JavaScript, I decided to use Python for this project. I also needed a way to interact with webpages
+            for this project, and after explaining my ideas to one of my friends in computer science, he suggested using the Selenium package for Python, which can automate
+            interactions with web services. After figuring out which tools I was going to use, I broke the project up into two parts. The first part mostly used the discord API, 
+            and involved making sure that questions were read at a proper pace, as well as handling interaction with player's messages when they tried to buzz or gave an answer.
+            The second part centered more on the Selenium package, making sure the question data could be gathered from the database website and handled properly so that the bot
+            could display it correctly.
+        </p>
+        <p class="justified image-paragraph">
+            For the first part of the project, all I wanted the bot to do was read questions from a text file, and be able to handle interruptions when players buzzed. This way I could
+            eliminate any errors that might be caused by trying to use Selenium to get text from the internet, so I would have a lot easier time troubleshooting if something wasn't right.
+            Since this was my first time making a Discord bot, I wanted to start simple. After following a YouTube tutorial to get the bot initially set up, I added it to my personal
+            server to do some testing. While using the Discord API documentation as a reference, I was able to make
+                
+            <div class="width550 text-wrap">
+                <img src="file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/Images/DiscordBot2.png" alt="DiscordBot2" width="1502" height="613" class="width550">
+                (Screenshot of some of the code for the Discord bot)
+            </div>
+
+            the bot send messages, read messages, and pull information from a text file.
+            All things that seem quite underwhelming on their own, but understanding these basic functions was key to being able to make something more complicated. After combining these
+            basic functions, it was pretty quick to set up a bot that could spit out questions from a text file. The tricky part was being able to determine when a player buzzes in or gives
+            an answer to the question. Thankfully, the Discord API allows you to run code every time a certain "event" occurs. So we can use the "on message" event to run some logic
+            every time a message is sent in a given channel. I only want the bot to stop when a player buzzes in, so it will first check if the message is either "buzz", "bz", or "b".
+            After a player buzzes in, we can grab their user ID and store it as the "buzzer" variable. Then, when the bot asks for an answer, we can have it check each message sent to see
+            if it matches the user ID of the buzzer before accepting the response. A message containing the answer is sent in spoiler text right before the question is read, so after the
+            player sends their response, it is on the honor system to verify that their guess was correct. Unfortunately, I could not figure out a way to automate the verification of the
+            answer without introducing complex logic or AI, which is something beyond the scope of this project. Once a player answers a question correctly, the bot automatically moves on
+            by reading the next question. There is a case where no one answers the question correctly, known as a "dead" question. To deal with this case, the bot simply waits ten seconds
+            after it finishes reading the question, and if no one answers it correctly, it will move on to the next question.    
+        </p>
+        <p class="justified">
+            I used a similar approach on the second part of the project as I did for the first. I started by verifying small, simple features and then combining them to make 
+            something more complicated. Functions that would be essential for this part of the project would be navigating to a website, accessing specific HTML elements, and
+            using mouse inputs. There are a few different ways to access HTML elements using Selenium. The way I chose to do it was by using the xpath, because I
+            thought it was the most versatile method. Each of the different elements I wanted to access could be stored as a variable, and then easily accessed later.
+            The question database I was using had tens of thousands of questions on it, and has ways to search for a specific category or difficulty. I wanted to be able to
+            utilize these features when using the bot. So, before the bot starts reading questions, it asks for the category and difficulty preference. The filters are then applied
+            on the website, and then a random 25 questions are read using the process discussed in part one, but this time, the text was being grabbed from the website instead
+            of a text file. The text could be accessed by using the xpath of the HTML element that contained the desired text, and each of the words inside that element
+            was stored in the form of a list. The only part of the question reading process that would have to be changed was where the text was sourced from, so the two
+            parts of the project were easy to integrate together. After reading all 25 questions, the bot would send a message stating the percentage of questions that
+            were answered correctly, and then reset for the next practice session.
+        </p>
+    </div>
+    <div class="thin-line"></div>
+    <h3 class="sectionheader">
+        Problems Along the Way
+    </h3>
+    <div class="body-paragraph">
+        <p class="justified">
+            There were two big roadblocks that I ran into while working on this project. The first concerned the manner in which questions were displayed.
+            In Quizbowl, questions are typically a lot longer compared to other popular forms of trivia. They start with more difficult pieces of information and work down
+            to easier ones. When reading questions aloud, this isn't an issue, but in discord, all the text is sent at the same time. This gives an advantage to players with
+            a faster reading speed, or even worse, allows players to cheat by just reading the last clue in the question from the beginning. Originally, my idea was to send multiple
+            messages, each with a few words of text, but that would create so much extra clutter and would be a pain to read. Unlike some other popular messaging apps, Discord
+            gives you the ability to edit messages after they are sent, and it turns out bots have this ability as well. So my next idea was to have the bot edit its original
+            message, each time appending a new word. The only issue with that idea is that Discord has a limit on how fast you can send or edit messages, and to edit at a fast
+            enough rate to simulate the pace at which someone was reading the questions, I was by far surpassing that limit. However, this is a pretty easy fix. Instead of
+            just appending one word to the message each time, I could add a few words, and increase the delay between edits. After some messing around, I found the sweet spot
+            to be around four words per edit. While this solution gets worse the more words per edit you have to add, I felt that four words really didn't mess up the pacing
+            significantly.
+        </p>
+        <p class="justified">
+            The second issue that took some time to figure out dealt with changing xpaths of certain HTML elements. When selecting certain filters that appear in a dropdown
+            menu on the database, some HTML elements will disappear and some others will appear in different areas. Because of the way the elements are indexed using the xpath,
+            when an element is removed or added, it changes the xpath of all the other elements nested with it that come after it. This proves to be a problem when selecting
+            question categories and difficulties on the database. But there's an easy fix. Since elements being removed only affects the elements that come after it, we can
+            just select the elements from the dropdown menu from bottom to top. This ensures that we don't change the xpath of the other elements inside of dropdown menu.
+            We reopen the webpage each time a new practice session is started, so there is no need to worry about missing elements carrying over.
+        </p>
+        <p class="justified">
+            After letting my Quizbowl teammates use the bot for a few days, I asked them to see if they had any recommendations on how to improve it. A few people suggested
+            implementing a way to end the practice session early. 25 questions is quite a lot, especially when you consider that the majority of the time people were using
+            the bot was on their phones when they had a few spare minutes of time. This was a simple fix. I added a variable to check at the end of every question if two
+            questions had gone dead in a row. If this was the case, then the bot would send a message asking if the player still wanted to continue the practice session. They
+            could respond with "y" to continue it, otherwise the session would end after 10 seconds. 
+        </p>
+    </div>
+    <div class="thin-line"></div>
+    <h3 class="sectionheader">
+        Results and Reflections
+    </h3>
+    <div class="body-paragraph justified">
+        <p class="image-paragraph">
+            This has been my favorite project that I've worked on so far. I'm so glad I was able to complete a fun project not only for a class but also for use outside of it.
+            It got a good amount of use from others at Purdue
+            
+            <div class="width500 text-wrap">
+                <img src="file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/Images/DiscordBot3.png" alt="DiscordBot3" width="1368" height="559" class="width500">
+                (Example dialogue when using the Discord bot to read questions)
+            </div>
+            
+            Quizbowl as well. While the bot no longer functions because the question database I was using was shut down, all
+            the code can be found on my GitHub page. I had some basic knowledge of Python going into this project,
+            but I had done nothing on this scale, so learning to organize my code in a way that was easily navigable was extremely helpful. It was also good getting to know just
+            how powerful Python packages and libraries can be, and some experience with the Discord API is easily something I can see myself using in the future. This was also 
+            my first time designing a project where the main users wouldn't be myself, so making sure that the bot's prompts were easy to understand and respond to was a must.
+        </p>
+    </div>
+
+    <nav class="bottomnav">
+        <div>
+
+        </div>
+        <div class="bottomrow">
+            <div class="bottomlink">
+                Email: sehonnigford@gmail.com
+            </div>
+            <div class="bottomlink">
+                Phone: (217) 402-6805
+            </div>
+            <a href=https://www.linkedin.com/in/seth-honnigford-34b691205/ class="bottomlink">
+                Linkedin
+            </a>
+            <a href=https://github.com/Seth-Honnigford class="bottomlink">
+                GitHub
+            </a>
+        </div>
+        <div>
+
+        </div>
+    </nav>
+</body>
+</html>
