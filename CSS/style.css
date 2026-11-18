@@ -106,8 +106,9 @@ div h2{
     display: flex;
     justify-content: space-between;
     padding: 5px;
+    gap: 2rem;
     width: 70%;
-    max-width: 500px;
+    max-width: 900px;
     margin:auto;
     align-items: center;
 }
