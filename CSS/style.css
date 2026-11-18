@@ -51,9 +51,9 @@ a, a:visited{
 
 .selector, .selector:visited{
     color: darkslategray;
-    background-color: cyan;
+    background-color: #70a7ff;
     border: 2px double;
-    border-color: cyan;
+    border-color: #70a7ff;
     border-radius: 2rem;
     padding: 7px 10px 7px;
     font-weight: 500;
