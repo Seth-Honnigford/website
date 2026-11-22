@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graduate Research - Seth Honnigford</title>
-    <link rel="stylesheet" href="..\CSS\style.css">
+    <link rel="stylesheet" href="C:\Users\sehon\Desktop\Prof Dev\Website Portfolio\CSS\style.css">
 </head>
 <body>
     <nav class="navbar">
@@ -15,16 +15,16 @@
             </h2>
         </div>
         <div class="right-content">
-            <a href=https://sethhonnigford.com/Home class="selector">
+            <a href=file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/Home.html class="selector">
                 Home
             </a>
-            <a href=https://sethhonnigford.com/Projects class="selector">
+            <a href=file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/Projects.html class="selector">
                 Projects
             </a>
-            <a href=https://sethhonnigford.com/Academics class="selector">
+            <a href=file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/Academics.html class="selector">
                 Academics
             </a>
-            <a href=https://sethhonnigford.com/About class="selector">
+            <a href=file:///C:/Users/sehon/Desktop/Prof%20Dev/Website%20Portfolio/About.html class="selector">
                 About
             </a>
         </div>
@@ -35,25 +35,86 @@
         Graduate Research
     </h2>
     <h3 class="sectionheader">
-        The Motivation and Progress so Far
+        Motivation
     </h3>
     <div class="body-paragraph">
         <p class="justified">
-            Existing literature for additive manufacturing of composite materials almost always deals with short length (<1mm) fibers. Printing with longer fibers
+            Fiber reinforced polymer composites are specialzed materials that offer unique advantages in many applications across different industries. Particularly,
+            fiber reinforced composites are excellent in cases where lightweight, strong parts are required. Automotive, biomedical, and aerospace make good use of 
+            the strengths of fiber reinforced materials. Many of the applications for composite materials require a low quantity of highly specialzed parts. Examples
+            of this include prosthetic limbs and rocket components.
+            Additive manufacturing is a perfect manufacturing method for those requirements, as it is better at creating complex geometries and is more cost effective
+            at low quantities compared to traditional manufacturing methods. Existing literature for additive manufacturing of composite materials 
+            almost always deals with short length (<1mm) fibers. The length of the fiber that reinforces a composite plays a major role in the resulting strength of
+            the material. Printing with longer fibers
             should theoretically increase the strength of the resulting composite, but it becomes difficult to print with long fibers as they increase the viscosity
             of the melt flow. Therefore, prints that use long fibers often contain lower fractions of carbon fiber, and consequently exhibit lower strength values
-            during testing. By blending pellets that contain both long and short discontinuous fibers, we believe we are able to observe an increase in strength from
-            longer fibers while maintaining the printability and high fiber fraction of the short fibers.
-        </p>
-        <p class="justified">
-            Currently, a variety of analysis have been performed to characterize the resulting material, including tensile, fiber length distribution, density, and
-            surface roughness. While initial results showed a decrease in ultimate strength for the long fiber-short fiber hybrid compared to just the short fiber,
-            this was concluded to largely be attributed to high porosity caused by the long fibers. Further experimentation will be conducted to compare samples with 
-            similar densities to further isolate the impact of the fiber on the tensile strength. If you'd like to learn more, be on the lookout for my publication at MSEC later this year! I'll be attending and would love to discuss my reserach
-            in person too!
+            during testing. By blending pellets that contain both long and short discontinuous fibers, we believed the resulting prints could exhibit higher strength 
+            values while mainting high carbon fiber loading. While we were not able to observe a significant improvement in tensile strength for the printed samples,
+            we used the data we gathered to study the effects that long fiber impart on the printing process, particularly void formation.
         </p>
     </div>
+    <div class="thin-line"></div>
+    <h3 class="sectionheader">
+        Materials and Experimentation
+    </h3>
+    <div class="body-paragraph">
+        <p class="justified">
+            The pellets used for the studies were made of polyphenylene sulfide with a fiber loading of 40 wt. %. Pellets acting as the souce of short fiber were reinforced with
+            fiber less than 0.5mm in length. The pellets serving as the source of long fiber contained fibers approximately 12mm in length. The pellet blends were printed
+            on a medium scale printer, with a build area of 0.5 by 0.5m, with typical volumetric flowrates of 100-900 cubic centimeters per minute. A 4mm nozzle was used
+            for all prints. Many forms of analysis were performed during the studies, including density, thermal camera analysis, micro-CT, optical microscopy, optical
+            surface profilometry, tensile testing, and digital image correlation.
+        </p>
+    </div>
+    <div class="thin-line"></div>
+    <h3 class="sectionheader">
+        Results and Conclusions
+    </h3>
+    <div class="body-paragraph">
+        <p class="justified">
+            After evaluating the performance of multiple long/short fiber ratios, the best that was observed was a near equal performance between samples that contained some 
+            amount of long fiber and samples that contained purely short fiber. It was evident from our resutls that prints containing long fiber would not outperform those without.
+            We theorized this to be the case because of the large voids that formed in the long fiber prints. The voids serve as stress concentrators, causing the samples containing 
+            long fibers to fail prematurely. It was also evident from the thermal camera imaging that the voids also had an impact on the extrusion itself. We observed significantly
+            higher variation in extrusion width when long fibers were present, and these variations are believed to correspond with the presence of voids. The nonuniform extrusion
+            impaced surface roughness and interlayer fusion, weakening the transverse strength of the parts significantly. The formation of voids was theorized to be caused by the
+            dewetting and agglomeration of fibers during the melt flow. Longer fibers will group together more easily, which is why we think larger voids are present in the samples
+            containing long fibers. Unfortunately, due to copyright, I am unable to show many of the figures that illustrate these findings, I highly encourage you to read the
+            publications listed below to learn more. While we did not observe an increase in tensile performance from the long fibers like we had hoped, we think that these findings 
+            illustrate the effects of long fibers and the mechnisms that form voids in material extrusion.
+        </p>
+    </div>
+    <div class="thin-line"></div>
+    <h3 class="sectionheader">
+        Learning
+    </h3>
+    <div class="body-paragraph">
+        <p class="justified">
+            Besides learning a lot about fiber reinforced composites and material extrusion processes, this research gave me valuable experience in many aspects of performing research.
+            I gained experience operating many pieces of equipment including microscopes, profilometers, waterjets, micro-CTs, and many more. Learning ImageJ provided the tools I need to
+            format readable, effective, and consistent figures that were used to illustrate discussion points and present results. The knowledge I gained from designing experiments will 
+            serve well for minimizing resource and time costs in future endeavors. Lastly, the writing workshops I attended and multiple publications I wrote improved my technical 
+            writing skills significantly.
+        </p>
+    </div>
+    <div class="thin-line"></div>
+    <h3 class="sectionheader">
+        Publications
+    </h3>
+    <p>
+        <a href=https://doi.org/10.1115/MSEC2026-182313 class=>
+            MSEC 2026 Conference Paper
+        </a>
+    </p>
+    <div class="spacer"></div>
+    <p>
+        <a href=https://doi.org/10.25394/PGS.34389144 class="bottomlink">
+            Masters Thesis 
+        </a>  
+    </p>
 
+    <div class="spacer"></div>
 
     <nav class="bottomnav">
         <div>
@@ -75,6 +136,4 @@
         </div>
     </nav>
 </body>
-
 </html>
-
